@@ -4,7 +4,7 @@
 #include <GL/glu.h>
 #include <GL/glext.h>
 static GLfloat spin = 0.0;
-double time;
+//double time;
 double x, y;
 
 GLfloat speed = 0.3;
@@ -13,7 +13,12 @@ GLfloat year = 0.0;
 GLfloat day = 0.0;
 GLfloat earthOrbitRad = 1.0;
 GLfloat dayTime = 5.0 * speed;
-GFfloat yearTime = days/360.0 * dayTime * speed;
+GLfloat yearTime = days/360.0 * dayTime * speed;
+void init(void);
+void time(void);
+void display(void);
+void physics(void);
+void reshapeFunc(int x, int y);
 
 class Orbit
 
@@ -50,8 +55,7 @@ void time(void){
 	display();
 }
 
-void display(void)
-{
+void display(void){
 //	glClearColor (0.110, 0.183, 0.255, 1.0);
    glClear(GL_COLOR_BUFFER_BIT); 
     glPushMatrix();
@@ -87,6 +91,18 @@ void physics(void){
 	
     glPopMatrix();
 }
+
+
+void reshapeFunc(int x, int y)
+{
+    if (y == 0 || x==0) return;
+ 
+    glLoadIdentity();
+    gluPerspective(40.0,(GLdouble)x/(GLdouble)y,0.5,20.0);
+    glMatrixMode(GL_MODELVIEW);
+    glViewport(0,0,x,y);
+    display();
+}
 /*void spinDisplay(void){
 	spin = spin + 1.0;
 	if (spin > 360.0)
@@ -102,7 +118,9 @@ int main(int argc, char** argv)
     glutInitWindowPosition(0, 0);
     glutCreateWindow("Space Simulator");
     init ();
+	glutReshapeFunc(reshapeFunc);
     glutDisplayFunc(display);
+	glutIdleFunc(time);
 //  glutIdleFunc(spinDisplay);
     glutMainLoop();
     return 0;
