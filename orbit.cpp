@@ -3,9 +3,6 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glext.h>
-static GLfloat spin = 0.0;
-//double time;
-double x, y;
 
 GLfloat speed = 0.3;
 GLfloat days = 365;
@@ -19,30 +16,6 @@ void time(void);
 void display(void);
 void physics(void);
 void reshapeFunc(int x, int y);
-
-class Orbit
-
-{	
-	public:
-		double semimajorAxis;
-		double semiminorAxis;
-		double period;
-};
-
-/*static void kepler(double semimajorAxis, double semiminorAxis, double time, double x, double y )
-{
-   double mass;
-   double distance;
-   double eccentricity;
-   double meanAnomaly;
-   double eccentricAnomaly;
-   double trueAnomaly;
-   
-   eccentricity = sqrt(semimajorAxis * semimajorAxis - semiminorAxis * semiminorAxis ) / semimajorAxis;
-   meanAnomaly = 2 * pi * time;
-   mass = meanAnomaly - 2 * pi * (meanAnomaly / 2 * pi);
-   eccentricAnomaly = mass;
-}*/
       
 void init(void){
 	glShadeModel (GL_FLAT);
@@ -56,15 +29,11 @@ void time(void){
 }
 
 void display(void){
-//	glClearColor (0.110, 0.183, 0.255, 1.0);
    glClear(GL_COLOR_BUFFER_BIT); 
     glPushMatrix();  
 	glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
-//  glRotatef(90.0,1.0,0.0,0.0);
-//	glRotatef(spin, 0.0, 0.0, 1.0);
-
 	physics();
 	glFlush();
 	glutSwapBuffers();
@@ -89,7 +58,6 @@ void physics(void){
 	glRotatef(day,0.25,1.0,0.0);    
 	
 	//earth
-    //glTranslatef(.55, 0, 0);
     glColor3ub(255,255,255);
 	glutWireSphere(0.1,20,20);
 	
@@ -107,13 +75,7 @@ void reshapeFunc(int x, int y)
     glViewport(0,0,x,y);
     display();
 }
-/*void spinDisplay(void){
-	spin = spin + 1.0;
-	if (spin > 360.0)
-		spin = spin - 360.0;
-	glutPostRedisplay();
-}
-*/
+
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
@@ -125,7 +87,6 @@ int main(int argc, char** argv)
 	glutReshapeFunc(reshapeFunc);
     glutDisplayFunc(display);
 	glutIdleFunc(time);
-//  glutIdleFunc(spinDisplay);
     glutMainLoop();
     return 0;
 }
