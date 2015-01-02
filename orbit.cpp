@@ -58,7 +58,9 @@ void time(void){
 void display(void){
 //	glClearColor (0.110, 0.183, 0.255, 1.0);
    glClear(GL_COLOR_BUFFER_BIT); 
-    glPushMatrix();
+    glPushMatrix();  
+	glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
     
 //  glRotatef(90.0,1.0,0.0,0.0);
 //	glRotatef(spin, 0.0, 0.0, 1.0);
