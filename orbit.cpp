@@ -75,10 +75,12 @@ void physics(void){
 	glPushMatrix();
 
 	//sun
+	glRotatef(90.0,1.0,0.0,0.0);
     glColor3ub(255,255,255);
     glutWireSphere(0.3,20,20);
 	glPushMatrix();
 		
+	glRotatef(90.0,1.0,0.0,0.0);	
 	glRotatef(year,0.0,1.0,0.0);
 	glTranslatef(earthOrbitRad,0.0,0.0);
 	glRotatef(-year,0.0,1.0,0.0);
@@ -87,7 +89,7 @@ void physics(void){
 	glRotatef(day,0.25,1.0,0.0);    
 	
 	//earth
-    glTranslatef(.55, 0, 0);
+    //glTranslatef(.55, 0, 0);
     glColor3ub(255,255,255);
 	glutWireSphere(0.1,20,20);
 	
@@ -119,7 +121,7 @@ int main(int argc, char** argv)
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("Space Simulator");
-    init ();
+    init();
 	glutReshapeFunc(reshapeFunc);
     glutDisplayFunc(display);
 	glutIdleFunc(time);
