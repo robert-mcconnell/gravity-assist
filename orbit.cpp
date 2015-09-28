@@ -12,10 +12,17 @@ void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT); 
     glPushMatrix();
+    
     glRotatef(90.0,1.0,0.0,0.0);
 	glRotatef(spin, 0.0, 0.0, 1.0);
+    
     glColor3ub(255,255,255);
-    glutWireSphere(0.5,20,20);
+    glutWireSphere(0.3,20,20);
+    
+    glTranslatef(.55, 0, 0);
+    glColor3ub(120,120,30);
+	glutWireSphere(0.1,20,20);
+    
     glPopMatrix();
 	glutSwapBuffers();
 }
