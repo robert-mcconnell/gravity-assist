@@ -4,6 +4,31 @@
 #include <GL/glu.h>
 #include <GL/glext.h>
 static GLfloat spin = 0.0;
+double time;
+double x, y;
+class Orbit
+{	
+	public:
+		double semimajorAxis;
+		double semiminorAxis;
+		double period;
+};
+
+static void kepler(double semimajorAxis, double semiminorAxis, double time, double x, double y )
+{
+   double mass;
+   double distance;
+   double eccentricity;
+   double meanAnomaly;
+   double eccentricAnomaly;
+   double trueAnomaly;
+   
+   //eccentricity = sqrt(semimajorAxis * semimajorAxis - semiminorAxis * semiminorAxis ) / semimajorAxis;
+   //meanAnomaly = 2 * pi * time;
+   //mass = meanAnomaly - 2 * pi * (meanAnomaly / 2 * pi);
+   //eccentricAnomaly = mass;
+}
+      
 void init(void){
 	glShadeModel (GL_FLAT);
 }
@@ -25,15 +50,9 @@ void display(void)
     glColor3ub(255,255,255);
 	glutWireSphere(0.1,20,20);
 	
-	//moon
-	glTranslatef(.2, 0, 0);
-    glColor3ub(255,255,255);
-	glutWireSphere(0.05,20,20);
-    
     glPopMatrix();
 	glutSwapBuffers();
 }
-
 void spinDisplay(void){
 	spin = spin + 1.0;
 	if (spin > 360.0)
