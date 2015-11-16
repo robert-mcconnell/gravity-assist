@@ -8,9 +8,9 @@ A <a href="https://en.wikipedia.org/wiki/Gravity_assist">gravitational assist</a
 ------------ 
 #####Gravity Assist
 A gravity assist is the act of getting close to a large gravitational body (like a planet) in order to speed up. In this process, the planet loses some of its orbital energy (conservation of energy) but the amount the planet loses is proportionately very small.
-
-![Gravity](https://raw.githubusercontent.com/AlbertFaust/gravity-assist/master/output2.gif)
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/AlbertFaust/gravity-assist/master/output2.gif">
+</p>
 #####Development
 
 This is a project that I plan on investing a lot of time in. I am very interested in Celestial Mechanics and want to work on a large Computer Graphics project. Some parts of the project I need to implement:
@@ -19,3 +19,4 @@ This is a project that I plan on investing a lot of time in. I am very intereste
 * Ability to control camera and 'time'. 
 * Accurate orbital physics using Kepler's Laws and Newtonian Gravitation.
 * Ability to generate 'planets' and see how a body reacts in the field.
+
