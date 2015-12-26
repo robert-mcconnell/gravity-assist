@@ -20,3 +20,9 @@ This is a project that I plan on investing a lot of time in. I am very intereste
 * Accurate orbital physics using Kepler's Laws and Newtonian Gravitation.
 * Ability to generate 'planets' and see how a body reacts in the field.
 
+#####Usage
+To compile:  
+`g++ orbit.cpp -lGL -lGLU -lGLEW -lglut -o orbit`
+
+To run:  
+`./orbit`
