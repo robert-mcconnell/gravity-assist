@@ -14,7 +14,7 @@ class Orbit
 		double period;
 };
 
-static void kepler(double semimajorAxis, double semiminorAxis, double time, double x, double y )
+/*static void kepler(double semimajorAxis, double semiminorAxis, double time, double x, double y )
 {
    double mass;
    double distance;
@@ -23,11 +23,11 @@ static void kepler(double semimajorAxis, double semiminorAxis, double time, doub
    double eccentricAnomaly;
    double trueAnomaly;
    
-   //eccentricity = sqrt(semimajorAxis * semimajorAxis - semiminorAxis * semiminorAxis ) / semimajorAxis;
-   //meanAnomaly = 2 * pi * time;
-   //mass = meanAnomaly - 2 * pi * (meanAnomaly / 2 * pi);
-   //eccentricAnomaly = mass;
-}
+   eccentricity = sqrt(semimajorAxis * semimajorAxis - semiminorAxis * semiminorAxis ) / semimajorAxis;
+   meanAnomaly = 2 * pi * time;
+   mass = meanAnomaly - 2 * pi * (meanAnomaly / 2 * pi);
+   eccentricAnomaly = mass;
+}*/
       
 void init(void){
 	glShadeModel (GL_FLAT);
