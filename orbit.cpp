@@ -38,14 +38,22 @@ class Orbit
       
 void init(void){
 	glShadeModel (GL_FLAT);
+	glClearColor (0.110, 0.183, 0.255, 1.0);
 }
+
+void time(void){
+	day += dayTime;
+	year += yearTime;
+	display();
+}
+
 void display(void)
 {
-	glClearColor (0.110, 0.183, 0.255, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT); 
+//	glClearColor (0.110, 0.183, 0.255, 1.0);
+   glClear(GL_COLOR_BUFFER_BIT); 
     glPushMatrix();
     
-//    glRotatef(90.0,1.0,0.0,0.0);
+//  glRotatef(90.0,1.0,0.0,0.0);
 //	glRotatef(spin, 0.0, 0.0, 1.0);
 
    	glRotatef(year,0.0,1.0,0.0);
