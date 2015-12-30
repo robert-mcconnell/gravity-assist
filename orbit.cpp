@@ -7,10 +7,13 @@ static GLfloat spin = 0.0;
 double time;
 double x, y;
 
+GLfloat speed = 0.3;
 GLfloat days = 365;
 GLfloat year = 0.0;
 GLfloat day = 0.0;
 GLfloat earthOrbitRad = 1.0;
+GLfloat dayTime = 5.0 * speed;
+GFfloat yearTime = days/360.0 * dayTime * speed;
 
 class Orbit
 
@@ -56,24 +59,33 @@ void display(void)
 //  glRotatef(90.0,1.0,0.0,0.0);
 //	glRotatef(spin, 0.0, 0.0, 1.0);
 
-   	glRotatef(year,0.0,1.0,0.0);
+	physics();
+	glFlush();
+	glutSwapBuffers();
+}   	
+
+void physics(void){
+	
+	glPushMatrix();
+
+	//sun
+    glColor3ub(255,255,255);
+    glutWireSphere(0.3,20,20);
+	glPushMatrix();
+		
+	glRotatef(year,0.0,1.0,0.0);
 	glTranslatef(earthOrbitRad,0.0,0.0);
 	glRotatef(-year,0.0,1.0,0.0);
 	glPushMatrix();
-
-    //sun
-    glColor3ub(255,255,255);
-    glutWireSphere(0.3,20,20);
     
 	glRotatef(day,0.25,1.0,0.0);    
+	
 	//earth
     glTranslatef(.55, 0, 0);
     glColor3ub(255,255,255);
 	glutWireSphere(0.1,20,20);
 	
     glPopMatrix();
-	glutSwapBuffers();
-	
 }
 /*void spinDisplay(void){
 	spin = spin + 1.0;
