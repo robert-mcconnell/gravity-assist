@@ -1,9 +1,7 @@
 <h3 align="center">
-Gravity Assist
-
-</h3>
-
+Gravity Assist<br><br>
 <img src="https://circleci.com/gh/adityai/gravity-assist.svg?style=shield&circle-token=:circle-token" />
+</h3>
 
 <p align="center">
 A <a href="https://en.wikipedia.org/wiki/Gravity_assist">gravitational assist</a> simulator that simulates the motion of objects as they enter and exit gravitational fields. The program is written using C++ and OpenGL and uses 'real physics' applying <a href="https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion">Kepler's Laws</a> and <a href="https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation">Newtonian Gravitation</a> to simulate the gravitational slingshots.<br><br>
