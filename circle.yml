@@ -3,6 +3,7 @@ dependencies:
    - sudo apt-get update; sudo apt-get install g++; 
    
   post:
+   - ls -ltr
    - g++ orbit.cpp -lGL -lGLU -lGLEW -lglut -o orbit
       
 test:
