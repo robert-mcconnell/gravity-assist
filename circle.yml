@@ -6,6 +6,7 @@ dependencies:
   post:
    - ls -ltr
    - g++ orbit.cpp -lGL -lGLU -lGLEW -lglut -o orbit
+   - cp orbit $CIRCLE_ARTIFACTS/
       
 test:
   override:
