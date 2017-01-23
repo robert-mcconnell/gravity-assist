@@ -13,6 +13,7 @@ A gravity assist is the act of getting close to a large gravitational body (like
   
 (This image is not the most up-to-date version)  
 </p>
+
 #####Development
 
 This is a project that I plan on investing a lot of time in. I am very interested in Celestial Mechanics and want to work on a large Computer Graphics project. Some parts of the project I need to implement:
@@ -21,6 +22,16 @@ This is a project that I plan on investing a lot of time in. I am very intereste
 * Ability to control camera and 'time'. 
 * Accurate orbital physics using Kepler's Laws and Newtonian Gravitation.
 * Ability to generate 'planets' and see how a body reacts in the field.
+
+#####Resources
+
+Some documentation that may be useful for development of the project. 
+
+* <a href="https://www.opengl.org/sdk/docs/reference_card/opengl45-reference-card.pdf">OpenGL 4.5 Reference Card</a>
+* <a href="http://docs.gl/">OpenGL API Documentation</a>
+* <a href="http://en.cppreference.com/w/">C++ Reference/Documentation</a>
+* <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/kepler.html">Kepler's Laws</a>
+* <a href="http://www.braeunig.us/space/orbmech.htm">Orbital Mechanics</a>
 
 #####Usage
 To compile:  
