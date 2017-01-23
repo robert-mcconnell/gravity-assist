@@ -1,6 +1,6 @@
 dependencies:
   pre: 
-   - sudo apt-get update; sudo apt-get install g++; sudo apt-get install freeglut3-dev;
+   - sudo apt-get update; sudo apt-get install g++; sudo apt-cache search glew; sudo apt-get install libglew-dev libglewmx-dev freeglut3-dev;
 
    
   post:
