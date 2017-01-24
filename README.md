@@ -1,7 +1,7 @@
 <h3 align="center">
 Gravity Assist<br><br>
-<a href="https://circleci.com/gh/adityai/gravity-assist/tree/master">
-<img src="https://circleci.com/gh/adityai/gravity-assist.svg?style=shield&circle-token=:circle-token" />
+<a href="https://circleci.com/gh/AlbertFaust/gravity-assist/tree/master">
+<img src="https://circleci.com/gh/AlbertFaust/gravity-assist.svg?style=shield&circle-token=:circle-token" />
 </a>
 
 </h3>
